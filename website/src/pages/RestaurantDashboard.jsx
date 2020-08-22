@@ -5,6 +5,7 @@ import NavRestaurant from "../NavRestaurant";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import "../App.css";
+import Claims from "../components/claims";
 // import axios from "axios";
 
 // function RestaurantDashboard() {
@@ -25,7 +26,20 @@ import "../App.css";
 // export default RestaurantDashboard;
 
 class RestaurantDashboard extends Component {
-  state = {};
+  state = {
+    claimslist: [
+      { id: 1, value: "Ssdf" },
+      { id: 2, value: "SDf" },
+      { id: 3, value: "SDFSDF" },
+      { id: 4, value: "Asdasd" },
+    ],
+  };
+
+  //deletes claim from claim list
+  handleDelete = (claimid) => {
+    const claimslist = this.state.claimslist.filter((c) => c.id !== claimid);
+    this.setState({ claimslist });
+  };
 
   render() {
     return (
@@ -46,6 +60,12 @@ class RestaurantDashboard extends Component {
           </Card.Body>
         </Card>
         <h1 className="title"> Claim Codes</h1>
+        <div className="center">
+          <Claims
+            claimslist={this.state.claimslist}
+            onDelete={this.handleDelete}
+          />
+        </div>
       </React.Fragment>
     );
   }
