@@ -3,7 +3,7 @@ import "./App.css";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import Navbar from "react-bootstrap/Navbar";
-function Nav() {
+function NavRestaurant() {
   const navStyle = {
     color: "white",
   };
@@ -14,11 +14,11 @@ function Nav() {
       </Link>
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
-        <Link style={navStyle} to="/restaurantlogin">
-          <Navbar.Text> Login</Navbar.Text>
-        </Link>
-        <Link style={navStyle} to="/restaurantsignup">
-          <Navbar.Text>Signup</Navbar.Text>
+        <Link style={navStyle} to="/">
+          <Navbar.Text>
+            Logout
+            {/* Signed in as: <a href="#login">Mark Otto</a> */}
+          </Navbar.Text>
         </Link>
       </Navbar.Collapse>
     </Navbar>
@@ -38,4 +38,4 @@ function Nav() {
   );
 }
 
-export default Nav;
+export default NavRestaurant;
