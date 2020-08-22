@@ -47,7 +47,8 @@ class RestaurantSignup extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div>
+        {/* // <div className="RestaurantSignup-component"> */}
         <Nav />
         {/* <Navbar bg="primary" variant="dark">
         <Link to="/">
@@ -116,7 +117,7 @@ class RestaurantSignup extends Component {
             </Link>
           </Form>
         </div>
-      </React.Fragment>
+      </div>
     );
   }
 }

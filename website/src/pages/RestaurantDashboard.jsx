@@ -45,6 +45,7 @@ class RestaurantDashboard extends Component {
             <Button variant="primary">Edit</Button>
           </Card.Body>
         </Card>
+        <h1 className="title"> Claim Codes</h1>
       </React.Fragment>
     );
   }
