@@ -15,10 +15,10 @@ function Nav() {
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
         <Link style={navStyle} to="/restaurantlogin">
-          <Navbar.Text>
-            Login as Restaurant
-            {/* Signed in as: <a href="#login">Mark Otto</a> */}
-          </Navbar.Text>
+          <Navbar.Text> Login</Navbar.Text>
+        </Link>
+        <Link style={navStyle} to="/restaurantsignup">
+          <Navbar.Text>Signup</Navbar.Text>
         </Link>
       </Navbar.Collapse>
     </Navbar>

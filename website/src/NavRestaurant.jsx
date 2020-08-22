@@ -14,7 +14,7 @@ function NavRestaurant() {
       </Link>
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
-        <Link style={navStyle} to="/restaurantlogin">
+        <Link style={navStyle} to="/">
           <Navbar.Text>
             Logout
             {/* Signed in as: <a href="#login">Mark Otto</a> */}
