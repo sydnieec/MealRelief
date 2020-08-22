@@ -89,6 +89,7 @@ class RestaurantForm extends Component {
 export default RestaurantForm;
 
 const formStyle = {
+  paddingTop: "5%",
   paddingRight: "20%",
   paddingLeft: "20%",
 };

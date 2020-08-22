@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import NavRestaurant from "../NavRestaurant";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-
+import "../App.css";
 // import axios from "axios";
 
 // function RestaurantDashboard() {
@@ -31,7 +31,7 @@ class RestaurantDashboard extends Component {
     return (
       <React.Fragment>
         <NavRestaurant />
-        <h1> Restaurant Dashboard</h1>
+        <h1 className="title "> Restaurant Dashboard</h1>
         <Card style={dashboardStyle}>
           <Card.Header as="h5">Current Listing</Card.Header>
           <Card.Body>
@@ -55,4 +55,5 @@ export default RestaurantDashboard;
 const dashboardStyle = {
   marginRight: "20%",
   marginLeft: "20%",
+  marginTop: "2%",
 };

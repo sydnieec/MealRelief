@@ -29,7 +29,7 @@ class RestaurantLogin extends Component {
         <Nav />
         <div style={loginStyle}>
           <h1> Login as a Food Provider </h1>
-          <Form onSubmit={this.handleSubmit}>
+          <Form style={formStyle} onSubmit={this.handleSubmit}>
             <Form.Group controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control
@@ -66,6 +66,11 @@ class RestaurantLogin extends Component {
 export default RestaurantLogin;
 
 const loginStyle = {
+  paddingTop: "10%",
   paddingRight: "30%",
   paddingLeft: "30%",
+};
+
+const formStyle = {
+  paddingTop: "5%",
 };

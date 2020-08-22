@@ -56,8 +56,8 @@ class RestaurantSignup extends Component {
         <Navbar.Toggle />
       </Navbar>{" "} */}
         <div style={loginStyle}>
-          <h1> Sign up for Food Providers </h1>
-          <Form onSubmit={this.handleSubmit}>
+          <h1> Sign up as a Food Provider </h1>
+          <Form style={formStyle} onSubmit={this.handleSubmit}>
             <Form.Row>
               <Form.Group as={Col} controlId="formGridEmail">
                 <Form.Label>Email</Form.Label>
@@ -124,6 +124,10 @@ class RestaurantSignup extends Component {
 export default RestaurantSignup;
 
 const loginStyle = {
+  paddingTop: "5%",
   paddingRight: "30%",
   paddingLeft: "30%",
+};
+const formStyle = {
+  paddingTop: "5%",
 };

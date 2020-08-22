@@ -1,7 +1,11 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
+.title {
+  text-align: center;
+  padding-top: 3%;
+}
 nav {
   display: flex;
   justify-content: space-around;

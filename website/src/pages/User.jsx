@@ -6,7 +6,7 @@ function User() {
   return (
     <div>
       <Nav />
-      <h1> User Dashboard </h1>;
+      <h1 className="title"> User Dashboard </h1>;
     </div>
   );
 }
