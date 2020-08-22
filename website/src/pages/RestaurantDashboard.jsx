@@ -37,19 +37,14 @@ class RestaurantDashboard extends Component {
           <Card.Body>
             <Card.Title>Restaurant Name</Card.Title>
             <Card.Text>
-              With supporting text below as a natural lead-in to additional
-              content.
+              12321 Main Street, Toronto, Ontario 000-000-0000
             </Card.Text>
+            <Card.Text>description of food item</Card.Text>
+            <Card.Text>servings available</Card.Text>
+
             <Button variant="primary">Edit</Button>
           </Card.Body>
         </Card>
-        <h2> Current Listing</h2>
-
-        <h4> Restaurant Name</h4>
-        <h5> Phone Number</h5>
-        <h5>Address </h5>
-        <h5> fskldfjslkfjlskfjlskfjslkdjfs</h5>
-        <h5> servings available</h5>
       </React.Fragment>
     );
   }

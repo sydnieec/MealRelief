@@ -14,12 +14,24 @@ function Nav() {
       </Link>
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
-        <Link style={navStyle} to="/restaurantlogin">
+        <ul className="nav-links">
+          <li>
+            <Link style={navStyle} to="/restaurantlogin">
+              <Navbar.Text> Login as a Food Provider</Navbar.Text>
+            </Link>
+          </li>
+          <li>
+            <Link style={navStyle} to="/restaurantsignup">
+              <Navbar.Text>Sign Up as a Food Provider</Navbar.Text>
+            </Link>
+          </li>
+        </ul>
+        {/* <Link style={navStyle} to="/restaurantlogin">
           <Navbar.Text> Login</Navbar.Text>
         </Link>
         <Link style={navStyle} to="/restaurantsignup">
           <Navbar.Text>Signup</Navbar.Text>
-        </Link>
+        </Link> */}
       </Navbar.Collapse>
     </Navbar>
     // <nav>
