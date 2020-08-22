@@ -11,7 +11,13 @@ import Col from "react-bootstrap/Col";
 class RestaurantSignup extends Component {
   constructor(props) {
     super(props);
-    this.state = { email: "", password: "", address: "", phonenumber: "" };
+    this.state = {
+      email: "",
+      password: "",
+      address: "",
+      phonenumber: "",
+      restaurtname: "",
+    };
   }
   handleEmailChange = (event) => {
     this.setState({ email: event.target.value });
@@ -25,10 +31,14 @@ class RestaurantSignup extends Component {
   handlePhoneNumberChange = (event) => {
     this.setState({ phonenumber: event.target.value });
   };
+  handleRestaurantNameChange = (event) => {
+    this.setState({ restaurantname: event.target.value });
+  };
   handleSubmit = (event) => {
     alert(
       this.state.email +
         this.state.password +
+        this.state.restaurtname +
         this.state.addres +
         this.state.phonenumber
     );
@@ -75,6 +85,15 @@ class RestaurantSignup extends Component {
               <Form.Control
                 value={this.state.address}
                 onChange={this.handleAddressChange}
+                placeholder="1234 Main St"
+              />
+            </Form.Group>
+
+            <Form.Group controlId="formGridAddress1">
+              <Form.Label>Restaurant Name</Form.Label>
+              <Form.Control
+                value={this.state.restaurantname}
+                onChange={this.handleRestaurantNameChange}
                 placeholder="1234 Main St"
               />
             </Form.Group>
