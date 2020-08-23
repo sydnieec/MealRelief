@@ -32,6 +32,9 @@ nav {
   align-items: center;
   list-style: none;
 }
+.color-nav {
+  background-color: rgb(255, 131, 100);
+}
 .rows {
   display: flex;
   flex-direction: row;
