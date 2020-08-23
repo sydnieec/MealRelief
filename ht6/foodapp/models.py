@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User  # added
+
 
 # Create your models here.
 class FoodProvider(models.Model):
@@ -12,4 +14,6 @@ class FoodProvider(models.Model):
     address = models.CharField(max_length=100)
     description = models.CharField(max_length=500, blank=True)
     servings = models.PositiveIntegerField(default=0)
+    owner = models.ForeignKey(
+        User, related_name="foodprovider", on_delete=models.CASCADE, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
