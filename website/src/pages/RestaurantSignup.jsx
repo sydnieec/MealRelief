@@ -42,7 +42,18 @@ class RestaurantSignup extends Component {
         this.state.address +
         this.state.phonenumber
     );
+<<<<<<< HEAD
   
+=======
+
+    fetch("http://127.0.0.1:8000/foodproviders/", {
+      method: "GET",
+      // We convert the React state to JSON and send it as the POST body
+    }).then(function (response) {
+      console.log(response);
+      return response.json();
+    });
+>>>>>>> 4192509052b65d1f1cc4cf2aa26ad5e904a6b0a5
 
     event.preventDefault();
   };
@@ -94,7 +105,6 @@ class RestaurantSignup extends Component {
                 />
               </Form.Group>
             </Form.Row>
-
             <Form.Group controlId="formGridAddress1">
               <Form.Label>Address</Form.Label>
               <Form.Control
@@ -103,7 +113,6 @@ class RestaurantSignup extends Component {
                 placeholder="1234 Main St"
               />
             </Form.Group>
-
             <Form.Group controlId="formGridAddress1">
               <Form.Label>Restaurant Name</Form.Label>
               <Form.Control
@@ -113,7 +122,6 @@ class RestaurantSignup extends Component {
                 required
               />
             </Form.Group>
-
             <Form.Group controlId="formGridPhone">
               <Form.Label>Phone Number</Form.Label>
               <Form.Control
@@ -122,15 +130,17 @@ class RestaurantSignup extends Component {
                 placeholder="(xxx)-(xxx)-(xxxx)"
                 required
               />
-              <Button variant="primary" type="submit">
+              <Button
+                bsStyle=""
+                style={btn}
+                bsClass="btn"
+                href="/restaurantform"
+                variant="primary"
+                type="submit"
+              >
                 Submit
               </Button>{" "}
             </Form.Group>
-            <Link to="/restaurantform">
-              <Button variant="primary" type="submit">
-                Submit
-              </Button>{" "}
-            </Link>
           </Form>
         </div>
       </div>
@@ -147,10 +157,17 @@ const loginStyle = {
 };
 const formStyle = {
   paddingTop: "15%",
-  backgroundColor: "#ff8364",
+  backgroundColor: "#FFDABB",
   paddingRight: "10%",
   paddingLeft: "10%",
   paddingBottom: "20%",
   borderRadius: "21px",
-  color: "white",
+  color: "black",
+};
+
+const btn = {
+  backgroundColor: "#ff8364",
+  borderColor: "#edf7fa",
+  color: "#edf7fa",
+  marginTop: "5%",
 };

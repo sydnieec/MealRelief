@@ -57,17 +57,18 @@ class RestaurantLogin extends Component {
                 onChange={this.handleLoginPasswordChange}
                 // type="password"
                 required
-                placeholder="Password"
+                placeholder="Enter password"
               />
             </Form.Group>
-            <Button bsStyle="" style={btn} bsClass="btn" type="submit">
+            <Button
+              bsStyle=""
+              style={btn}
+              bsClass="btn"
+              type="submit"
+              href="/restaurantform"
+            >
               Submit
             </Button>{" "}
-            <Link to="/restaurantform">
-              <Button bsStyle="" style={btn} bsClass="btn" type="submit">
-                Login
-              </Button>
-            </Link>
           </Form>
         </div>
       </React.Fragment>
@@ -86,16 +87,16 @@ const loginStyle = {
 
 const formStyle = {
   paddingTop: "15%",
-  backgroundColor: "#ff8364",
+  backgroundColor: "#FFDABB",
   paddingRight: "25%",
   paddingLeft: "25%",
   paddingBottom: "20%",
   borderRadius: "21px",
-  color: "white",
+  color: "black",
 };
 
 const btn = {
-  backgroundColor: "#ffb677",
+  backgroundColor: "#ff8364",
   borderColor: "#edf7fa",
   color: "#edf7fa",
 };
