@@ -16,7 +16,7 @@ class RestaurantSignup extends Component {
       password: "",
       address: "",
       phonenumber: "",
-      restaurantname: "",
+      restaurantname: ""
     };
   }
   handleEmailChange = (event) => {
@@ -42,6 +42,9 @@ class RestaurantSignup extends Component {
         this.state.address +
         this.state.phonenumber
     );
+<<<<<<< HEAD
+  
+=======
 
     fetch("http://127.0.0.1:8000/foodproviders/", {
       method: "GET",
@@ -50,6 +53,7 @@ class RestaurantSignup extends Component {
       console.log(response);
       return response.json();
     });
+>>>>>>> 4192509052b65d1f1cc4cf2aa26ad5e904a6b0a5
 
     event.preventDefault();
   };
