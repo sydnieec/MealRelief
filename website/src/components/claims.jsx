@@ -8,7 +8,7 @@ class Claims extends Component {
       <div>
         {this.props.claimslist.map((claim) => (
           <Claim
-            key={claim.id}
+            key={claim.code}
             onClaim={this.props.onClaim}
             onDelete={this.props.onDelete}
             claim={claim}

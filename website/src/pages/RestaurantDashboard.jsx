@@ -10,23 +10,34 @@ import Claims from "../components/claims";
 
 class RestaurantDashboard extends Component {
   state = {
-    claimslist: [
-      { id: 1, value: "Ssdf" },
-      { id: 2, value: "SDf" },
-      { id: 3, value: "SDFSDF" },
-      { id: 4, value: "Asdasd" },
-    ],
+    claimslist: [],
   };
+
+  componentDidMount() {
+    // supposed to only get claim codes for one provider but this retrieves all for now
+    fetch('http://127.0.0.1:8000/claimcodes/', {
+      method: 'GET',
+    }).then((response) => response.json())
+    .then(list => {
+      this.setState({ claimslist: list });
+    });
+  }
 
   //deletes claim from claim list
   handleDelete = (claimid) => {
     const claimslist = this.state.claimslist.filter((c) => c.id !== claimid);
     this.setState({ claimslist });
+    fetch('http://127.0.0.1:8000/claimcodes/'+claimid+'/', {
+      method: 'DELETE',
+    }).then((response) => console.log(response));
   };
 
   handleClaims = (claimid) => {
     const claimslist = this.state.claimslist.filter((c) => c.id !== claimid);
     this.setState({ claimslist });
+    fetch('http://127.0.0.1:8000/claimcodes/'+claimid+'/', {
+      method: 'DELETE',
+    }).then((response) => console.log(response));
   };
 
   render() {
@@ -44,7 +55,7 @@ class RestaurantDashboard extends Component {
             <Card.Text>description of food item</Card.Text>
             <Card.Text>servings available</Card.Text>
 
-            <Button variant="primary">Edit</Button>
+            <Button style={btn}>Edit</Button>
           </Card.Body>
         </Card>
         <h1 className="title"> Claim Codes</h1>
@@ -72,4 +83,11 @@ const claimStyle = {
   marginRight: "30%",
   marginLeft: "30%",
   marginTop: "2%",
+};
+
+const btn = {
+  backgroundColor: "#ff8364",
+  borderColor: "#edf7fa",
+  color: "#edf7fa",
+  marginTop: "5%",
 };

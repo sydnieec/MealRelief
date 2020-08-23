@@ -2,8 +2,7 @@ import React from "react";
 import "./App.css";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
-import Navbar from "react-bootstrap/Navbar";
-import Button from "react-bootstrap/Button";
+import { Navbar, Button, Image, } from "react-bootstrap";
 
 function NavRestaurant() {
   const navStyle = {
@@ -11,7 +10,7 @@ function NavRestaurant() {
   };
   return (
     <Navbar className="color-nav" variant="dark">
-      <Navbar.Brand href="/"><img src="https://imgur.com/5HBGuCZ"></Navbar.Brand>
+      <Navbar.Brand href="/"><Image style={imgstyle} src="https://i.imgur.com/5HBGuCZ.png" /></Navbar.Brand>
 
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
@@ -24,3 +23,9 @@ function NavRestaurant() {
 }
 
 export default NavRestaurant;
+
+const imgstyle = {
+  maxHeight: "80px",
+  paddingTop: "5%",
+  paddingLeft: "10%"
+}

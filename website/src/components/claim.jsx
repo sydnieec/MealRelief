@@ -3,11 +3,10 @@ import Badge from "react-bootstrap/Badge";
 //class for what an indivdual claim would look like
 class Claim extends Component {
   render() {
-    console.log("props", this.props);
     return (
       <div class="d-flex justify-content-between">
         <div>
-          <span style={{ fontsize: 30 }}>{this.props.claim.value}</span>
+          <span style={{ fontsize: 30 }}>{this.props.claim.code}</span>
         </div>
         <div>
           <button
