@@ -129,7 +129,8 @@ const styles = {
   map: {
     height: '100vh',
     width: '40%',
-    padding: '12px'
+    minWidth: 400,
+    padding: '0 12px 12px 12px'
   }
 }
 

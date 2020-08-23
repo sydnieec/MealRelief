@@ -42,9 +42,9 @@ class User extends Component {
       <div>
         <Nav />
         <div className="mb-4"></div>
-        <DefaultMap />
 
         <div className="row">
+          <DefaultMap />
           <UserClaims
             userclaimslist={this.state.userclaimslist}
             onUserClaim={this.handleUserClaims}
