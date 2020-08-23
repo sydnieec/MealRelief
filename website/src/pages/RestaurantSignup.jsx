@@ -126,6 +126,7 @@ class RestaurantSignup extends Component {
                 href="/restaurantform"
                 variant="primary"
                 type="submit"
+                onSubmit={this.handleSubmit}
               >
                 Submit
               </Button>{" "}
