@@ -22,9 +22,22 @@ class RestaurantForm extends Component {
   };
   handleSubmit = (event) => {
     alert(this.state.foodname + this.state.servings + this.state.description);
+    const obj = {
+      "phone": "123 456 7890",
+      "address": "1234 Main St.",
+      "name": this.state.foodname,
+      "image": "https://img.pngio.com/dish-free-vector-icons-designed-by-pause08-food-icon-png-food-food-icons-png-512_512.png",
+      "description": this.state.description,
+      "servings": this.state.servings,
+      "created_at": "08/23/2020 01:46:29",
+      "owner": null
+    }
     fetch('http://127.0.0.1:8000/foodproviders/', {
-      method: 'GET',
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
       // We convert the React state to JSON and send it as the POST body
+      
+      body: JSON.stringify(obj)
     }).then(function(response) {
       console.log(response)
       return response.json();
