@@ -37,9 +37,19 @@ class RestaurantForm extends Component {
     return (
       <React.Fragment>
         <NavRestaurant />
-        <div style={formStyle}>
-          <h1> Add a food listing </h1>
-          <Form onSubmit={this.handleSubmit}>
+        <div style={pageStyle}>
+          <h1
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              paddingBottom: "5%",
+            }}
+          >
+            {" "}
+            Add a food listing{" "}
+          </h1>
+          <Form style={formStyle} onSubmit={this.handleSubmit}>
             <Form.Group>
               <Form.Label>Food Name</Form.Label>
               <Form.Control
@@ -99,8 +109,17 @@ class RestaurantForm extends Component {
 
 export default RestaurantForm;
 
-const formStyle = {
+const pageStyle = {
   paddingTop: "5%",
   paddingRight: "20%",
   paddingLeft: "20%",
+};
+const formStyle = {
+  paddingTop: "5%",
+  backgroundColor: "#ff8364",
+  paddingRight: "10%",
+  paddingLeft: "10%",
+  paddingBottom: "10%",
+  borderRadius: "21px",
+  color: "white",
 };

@@ -41,18 +41,12 @@ class User extends Component {
       <div>
         <Nav />
         <h1 className="title"> User Dashboard </h1>
-        <div className="userlists">
-          <ul className="userlists">
-            <li>
-              <DefaultMap />
-            </li>
-            <li>
-              <UserClaims
-                userclaimslist={this.state.userclaimslist}
-                onUserClaim={this.handleUserClaims}
-              />
-            </li>
-          </ul>
+        <DefaultMap />
+        <div className="row">
+          <UserClaims
+            userclaimslist={this.state.userclaimslist}
+            onUserClaim={this.handleUserClaims}
+          />
         </div>
       </div>
     );

@@ -8,7 +8,7 @@ function NavRestaurant() {
     color: "white",
   };
   return (
-    <Navbar bg="primary" variant="dark">
+    <Navbar className="color-nav" variant="dark">
       <Link style={navStyle} to="/">
         <Navbar.Brand href="#home">Logo</Navbar.Brand>
       </Link>

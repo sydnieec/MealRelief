@@ -66,7 +66,17 @@ class RestaurantSignup extends Component {
         <Navbar.Toggle />
       </Navbar>{" "} */}
         <div style={loginStyle}>
-          <h1> Sign up as a Food Provider </h1>
+          <h1
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              paddingBottom: "5%",
+            }}
+          >
+            {" "}
+            Sign up as a Food Provider{" "}
+          </h1>
           <Form style={formStyle} onSubmit={this.handleSubmit}>
             <Form.Row>
               <Form.Group as={Col} controlId="formGridEmail">
@@ -143,5 +153,11 @@ const loginStyle = {
   paddingLeft: "30%",
 };
 const formStyle = {
-  paddingTop: "5%",
+  paddingTop: "15%",
+  backgroundColor: "#ff8364",
+  paddingRight: "10%",
+  paddingLeft: "10%",
+  paddingBottom: "20%",
+  borderRadius: "21px",
+  color: "white",
 };
