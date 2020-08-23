@@ -33,6 +33,5 @@ export default Nav;
 
 const imgstyle = {
   maxHeight: "80px",
-  paddingTop: "5%",
   paddingLeft: "10%"
 }

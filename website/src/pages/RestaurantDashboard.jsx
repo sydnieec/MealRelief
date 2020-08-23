@@ -48,12 +48,12 @@ class RestaurantDashboard extends Component {
         <Card style={dashboardStyle}>
           <Card.Header as="h5">Current Listing</Card.Header>
           <Card.Body>
-            <Card.Title>Restaurant Name</Card.Title>
+            <Card.Title>Jodie's Pizza Place</Card.Title>
             <Card.Text>
               12321 Main Street, Toronto, Ontario 000-000-0000
             </Card.Text>
-            <Card.Text>description of food item</Card.Text>
-            <Card.Text>servings available</Card.Text>
+            <Card.Text>Pepperoni Pizza</Card.Text>
+            <Card.Text>11 servings available</Card.Text>
 
             <Button style={btn}>Edit</Button>
           </Card.Body>

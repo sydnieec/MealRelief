@@ -12,7 +12,7 @@ class FoodProvider(models.Model):
     name = models.CharField(max_length=100)
     image = models.TextField(
         max_length=10000,
-        default="https://w0.pngwave.com/png/554/203/restaurant-computer-icons-food-menu-menu-png-clip-art.png",
+        default="https://img.pngio.com/dish-free-vector-icons-designed-by-pause08-food-icon-png-food-food-icons-png-512_512.png",
         null=True
     )
     description = models.CharField(max_length=500, blank=True)

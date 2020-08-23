@@ -26,6 +26,5 @@ export default NavRestaurant;
 
 const imgstyle = {
   maxHeight: "80px",
-  paddingTop: "5%",
   paddingLeft: "10%"
 }
