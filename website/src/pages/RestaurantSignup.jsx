@@ -16,7 +16,7 @@ class RestaurantSignup extends Component {
       password: "",
       address: "",
       phonenumber: "",
-      restaurtname: "",
+      restaurantname: "",
     };
   }
   handleEmailChange = (event) => {
@@ -38,10 +38,18 @@ class RestaurantSignup extends Component {
     alert(
       this.state.email +
         this.state.password +
-        this.state.restaurtname +
-        this.state.addres +
+        this.state.restaurantname +
+        this.state.address +
         this.state.phonenumber
     );
+
+    fetch("http://127.0.0.1:8000/foodproviders/", {
+      method: "GET",
+      // We convert the React state to JSON and send it as the POST body
+    }).then(function (response) {
+      console.log(response);
+      return response.json();
+    });
 
     event.preventDefault();
   };
@@ -58,7 +66,17 @@ class RestaurantSignup extends Component {
         <Navbar.Toggle />
       </Navbar>{" "} */}
         <div style={loginStyle}>
-          <h1> Sign up as a Food Provider </h1>
+          <h1
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              paddingBottom: "5%",
+            }}
+          >
+            {" "}
+            Sign up as a Food Provider{" "}
+          </h1>
           <Form style={formStyle} onSubmit={this.handleSubmit}>
             <Form.Row>
               <Form.Group as={Col} controlId="formGridEmail">
@@ -83,7 +101,6 @@ class RestaurantSignup extends Component {
                 />
               </Form.Group>
             </Form.Row>
-
             <Form.Group controlId="formGridAddress1">
               <Form.Label>Address</Form.Label>
               <Form.Control
@@ -92,34 +109,34 @@ class RestaurantSignup extends Component {
                 placeholder="1234 Main St"
               />
             </Form.Group>
-
             <Form.Group controlId="formGridAddress1">
               <Form.Label>Restaurant Name</Form.Label>
               <Form.Control
                 value={this.state.restaurantname}
                 onChange={this.handleRestaurantNameChange}
-                placeholder="1234 Main St"
+                placeholder="Alberto's Pizza Palace"
                 required
               />
             </Form.Group>
-
             <Form.Group controlId="formGridPhone">
               <Form.Label>Phone Number</Form.Label>
               <Form.Control
                 value={this.state.phonenumber}
                 onChange={this.handlePhoneNumberChange}
-                placeholder="000-000-0000"
+                placeholder="(xxx)-(xxx)-(xxxx)"
                 required
               />
-              <Button variant="primary" type="submit">
+              <Button
+                bsStyle=""
+                style={btn}
+                bsClass="btn"
+                href="/restaurantform"
+                variant="primary"
+                type="submit"
+              >
                 Submit
               </Button>{" "}
             </Form.Group>
-            <Link to="/restaurantform">
-              <Button variant="primary" type="submit">
-                Submit
-              </Button>{" "}
-            </Link>
           </Form>
         </div>
       </div>
@@ -135,5 +152,18 @@ const loginStyle = {
   paddingLeft: "30%",
 };
 const formStyle = {
-  paddingTop: "5%",
+  paddingTop: "15%",
+  backgroundColor: "#FFDABB",
+  paddingRight: "10%",
+  paddingLeft: "10%",
+  paddingBottom: "20%",
+  borderRadius: "21px",
+  color: "black",
+};
+
+const btn = {
+  backgroundColor: "#ff8364",
+  borderColor: "#edf7fa",
+  color: "#edf7fa",
+  marginTop: "5%",
 };

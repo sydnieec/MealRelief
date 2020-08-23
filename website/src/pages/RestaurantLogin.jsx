@@ -28,7 +28,17 @@ class RestaurantLogin extends Component {
       <React.Fragment>
         <Nav />
         <div style={loginStyle}>
-          <h1> Login as a Food Provider </h1>
+          <h1
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              paddingBottom: "5%",
+            }}
+          >
+            {" "}
+            Login as a Food Provider{" "}
+          </h1>
           <Form style={formStyle} onSubmit={this.handleSubmit}>
             <Form.Group controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
@@ -47,17 +57,18 @@ class RestaurantLogin extends Component {
                 onChange={this.handleLoginPasswordChange}
                 // type="password"
                 required
-                placeholder="Password"
+                placeholder="Enter password"
               />
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button
+              bsStyle=""
+              style={btn}
+              bsClass="btn"
+              type="submit"
+              href="/restaurantform"
+            >
               Submit
             </Button>{" "}
-            <Link to="/restaurantform">
-              <Button variant="primary" type="submit">
-                Login
-              </Button>
-            </Link>
           </Form>
         </div>
       </React.Fragment>
@@ -68,11 +79,24 @@ class RestaurantLogin extends Component {
 export default RestaurantLogin;
 
 const loginStyle = {
-  paddingTop: "10%",
+  paddingTop: "5%",
   paddingRight: "30%",
   paddingLeft: "30%",
+  paddingBottom: "10%",
 };
 
 const formStyle = {
-  paddingTop: "5%",
+  paddingTop: "15%",
+  backgroundColor: "#FFDABB",
+  paddingRight: "25%",
+  paddingLeft: "25%",
+  paddingBottom: "20%",
+  borderRadius: "21px",
+  color: "black",
+};
+
+const btn = {
+  backgroundColor: "#ff8364",
+  borderColor: "#edf7fa",
+  color: "#edf7fa",
 };
