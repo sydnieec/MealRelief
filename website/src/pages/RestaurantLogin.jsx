@@ -60,11 +60,11 @@ class RestaurantLogin extends Component {
                 placeholder="Password"
               />
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button bsStyle="" style={btn} bsClass="btn" type="submit">
               Submit
             </Button>{" "}
             <Link to="/restaurantform">
-              <Button variant="primary" type="submit">
+              <Button bsStyle="" style={btn} bsClass="btn" type="submit">
                 Login
               </Button>
             </Link>
@@ -92,4 +92,10 @@ const formStyle = {
   paddingBottom: "20%",
   borderRadius: "21px",
   color: "white",
+};
+
+const btn = {
+  backgroundColor: "#ffb677",
+  borderColor: "#edf7fa",
+  color: "#edf7fa",
 };

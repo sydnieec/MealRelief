@@ -40,6 +40,14 @@ nav {
   flex-direction: row;
 }
 
+.btn-optin {
+  color: rgb(255, 131, 100);
+  background-color: rgb(255, 131, 100);
+  background-color: cutom-color;
+  border-color: rgb(255, 131, 100);
+  border-color: cutom-cor;
+}
+
 /* .App-logo {
   height: 40vmin;
   pointer-events: none;
