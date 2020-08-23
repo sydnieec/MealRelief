@@ -15,7 +15,9 @@ function NavRestaurant() {
 
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
-        <Button href="/">Logout</Button>
+        <Button href="/" variant="outline-light">
+          Logout
+        </Button>
       </Navbar.Collapse>
     </Navbar>
     // <nav>

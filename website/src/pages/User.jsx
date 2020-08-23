@@ -23,6 +23,7 @@ class User extends Component {
         description: "We have pepperoni pizza!",
         servings: "10",
       },
+
       // { id: 2, value: "SDf" },
       // { id: 3, value: "SDFSDF" },
       // { id: 4, value: "Asdasd" },
@@ -42,6 +43,7 @@ class User extends Component {
         <Nav />
         <div className="mb-4"></div>
         <DefaultMap />
+
         <div className="row">
           <UserClaims
             userclaimslist={this.state.userclaimslist}
