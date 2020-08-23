@@ -11,15 +11,11 @@ function NavRestaurant() {
   };
   return (
     <Navbar className="color-nav" variant="dark">
-      <Link style={navStyle} to="/">
-        <Navbar.Brand href="#home">Logo</Navbar.Brand>
-      </Link>
+      <Navbar.Brand href="/">Logo</Navbar.Brand>
+
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
-        <Button href="/">
-            Logout
-            {/* Signed in as: <a href="#login">Mark Otto</a> */}
-        </Button>
+        <Button href="/">Logout</Button>
       </Navbar.Collapse>
     </Navbar>
     // <nav>

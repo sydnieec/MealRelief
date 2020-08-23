@@ -22,14 +22,14 @@ class RestaurantForm extends Component {
   };
   handleSubmit = (event) => {
     alert(this.state.foodname + this.state.servings + this.state.description);
-    fetch('http://127.0.0.1:8000/foodproviders/', {
-      method: 'GET',
+    fetch("http://127.0.0.1:8000/foodproviders/", {
+      method: "GET",
       // We convert the React state to JSON and send it as the POST body
-    }).then(function(response) {
-      console.log(response)
+    }).then(function (response) {
+      console.log(response);
       return response.json();
     });
-    
+
     event.preventDefault();
   };
 
@@ -92,14 +92,16 @@ class RestaurantForm extends Component {
                 />
               </Form.Group>
             </Form>
-            <Button variant="primary" type="submit">
+            <Button
+              bsStyle=""
+              style={btn}
+              bsClass="btn"
+              variant="primary"
+              type="submit"
+              href="/restaurantdashboard"
+            >
               Submit
             </Button>
-            <Link to="/restaurantdashboard">
-              <Button variant="primary" type="submit">
-                Submit
-              </Button>
-            </Link>
           </Form>
         </div>
       </React.Fragment>
@@ -116,10 +118,16 @@ const pageStyle = {
 };
 const formStyle = {
   paddingTop: "5%",
-  backgroundColor: "#ff8364",
+  backgroundColor: "#FFDABB",
   paddingRight: "10%",
   paddingLeft: "10%",
   paddingBottom: "10%",
   borderRadius: "21px",
-  color: "white",
+  color: "black",
+};
+
+const btn = {
+  backgroundColor: "#ff8364",
+  borderColor: "#edf7fa",
+  color: "#edf7fa",
 };

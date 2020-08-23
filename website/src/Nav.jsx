@@ -11,12 +11,14 @@ function Nav() {
   };
   return (
     <Navbar className="color-nav" variant="dark">
-      <Link style={navStyle} to="/">
-        <Navbar.Brand href="#home">Logo</Navbar.Brand>
-      </Link>
+      <Navbar.Brand href="/">Logo</Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
-        <Button variant="outline-light" href="/restaurantlogin" className="mr-3">
+        <Button
+          variant="outline-light"
+          href="/restaurantlogin"
+          className="mr-3"
+        >
           Login as a Food Provider
         </Button>
         <Button variant="outline-light" href="/restaurantsignup">
