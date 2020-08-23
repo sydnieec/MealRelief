@@ -98,7 +98,7 @@ class RestaurantSignup extends Component {
               <Form.Control
                 value={this.state.restaurantname}
                 onChange={this.handleRestaurantNameChange}
-                placeholder="1234 Main St"
+                placeholder="Alberto's Pizza Palace"
                 required
               />
             </Form.Group>
@@ -108,7 +108,7 @@ class RestaurantSignup extends Component {
               <Form.Control
                 value={this.state.phonenumber}
                 onChange={this.handlePhoneNumberChange}
-                placeholder="000-000-0000"
+                placeholder="(xxx)-(xxx)-(xxxx)"
                 required
               />
               <Button variant="primary" type="submit">

@@ -7,7 +7,12 @@ class Claims extends Component {
     return (
       <div>
         {this.props.claimslist.map((claim) => (
-          <Claim key={claim.id} onDelete={this.props.onDelete} claim={claim} />
+          <Claim
+            key={claim.id}
+            onClaim={this.props.onClaim}
+            onDelete={this.props.onDelete}
+            claim={claim}
+          />
         ))}
       </div>
     );

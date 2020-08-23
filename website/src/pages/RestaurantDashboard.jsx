@@ -41,11 +41,16 @@ class RestaurantDashboard extends Component {
     this.setState({ claimslist });
   };
 
+  handleClaims = (claimid) => {
+    const claimslist = this.state.claimslist.filter((c) => c.id !== claimid);
+    this.setState({ claimslist });
+  };
+
   render() {
     return (
       <React.Fragment>
         <NavRestaurant />
-        <h1 className="title "> Restaurant Dashboard</h1>
+        <h1 className="title "> Your Dashboard </h1>
         <Card style={dashboardStyle}>
           <Card.Header as="h5">Current Listing</Card.Header>
           <Card.Body>
@@ -64,6 +69,7 @@ class RestaurantDashboard extends Component {
           <Claims
             claimslist={this.state.claimslist}
             onDelete={this.handleDelete}
+            onClaim={this.handleClaims}
           />
         </div>
       </React.Fragment>

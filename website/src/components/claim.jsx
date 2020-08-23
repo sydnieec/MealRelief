@@ -7,10 +7,15 @@ class Claim extends Component {
     return (
       <div class="d-flex justify-content-between">
         <div>
-          <Badge variant="success">Claimed</Badge>{" "}
           <span style={{ fontsize: 30 }}>{this.props.claim.value}</span>
         </div>
         <div>
+          <button
+            onClick={() => this.props.onClaim(this.props.claim.id)}
+            className="btn btn-success btn-sm m-2"
+          >
+            Approve Claim
+          </button>
           <button
             onClick={() => this.props.onDelete(this.props.claim.id)}
             className="btn btn-danger btn-sm m-2"
