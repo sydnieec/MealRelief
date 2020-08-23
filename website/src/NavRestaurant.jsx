@@ -11,7 +11,7 @@ function NavRestaurant() {
   };
   return (
     <Navbar className="color-nav" variant="dark">
-      <Navbar.Brand href="/">MealRelief</Navbar.Brand>
+      <Navbar.Brand href="/"><img src="https://imgur.com/5HBGuCZ"></Navbar.Brand>
 
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
