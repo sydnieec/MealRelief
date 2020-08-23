@@ -6,47 +6,29 @@ import UserClaims from "../components/userclaims";
 
 class User extends Component {
   state = {
-    userclaimslist: [
-      {
-        id: 1,
-        restaurant: "Pizza",
-        telephone: "123-456-7890",
-        address: "123 Main Street",
-        description: "We have pepperoni pizza!",
-        servings: "10",
-      },
-      {
-        id: 1,
-        restaurant: "Pizza",
-        telephone: "123-456-7890",
-        address: "123 Main Street",
-        description: "We have pepperoni pizza!",
-        servings: "10",
-      },
-      // { id: 2, value: "SDf" },
-      // { id: 3, value: "SDFSDF" },
-      // { id: 4, value: "Asdasd" },
-    ],
+    userclaimslist: []
   };
 
-  handleUserClaims = (claimid) => {
-    const userclaimslist = this.state.userclaimslist.filter(
-      (c) => c.id !== claimid
-    );
-    this.setState({ userclaimslist });
-  };
+  componentDidMount() {
+    fetch('http://127.0.0.1:8000/foodproviders/', {
+      method: 'GET',
+    }).then((response) => response.json())
+    .then(list => {
+      this.setState({ userclaimslist: list });
+    });
+  }
 
   render() {
     return (
       <div>
         <Nav />
-        <div className="mb-4"></div>
-        <DefaultMap />
-        <div className="row">
-          <UserClaims
-            userclaimslist={this.state.userclaimslist}
-            onUserClaim={this.handleUserClaims}
-          />
+        <div className="row mt-4" style={rowStyle}>
+          <DefaultMap />
+          <div style={claimStyle}>
+            <UserClaims
+              userclaimslist={this.state.userclaimslist}
+            />
+          </div>
         </div>
       </div>
     );
@@ -54,3 +36,11 @@ class User extends Component {
 }
 
 export default User;
+
+const rowStyle = {
+  paddingLeft: "5%"
+}
+
+const claimStyle = {
+  paddingLeft: "5%",
+}

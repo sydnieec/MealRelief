@@ -8,8 +8,6 @@ class UserClaims extends Component {
       <div>
         {this.props.userclaimslist.map((userclaim) => (
           <UserClaim
-            key={userclaim.id}
-            onUserClaim={this.props.onUserClaim}
             userclaim={userclaim}
           />
         ))}
