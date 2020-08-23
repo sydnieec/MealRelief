@@ -16,7 +16,7 @@ class RestaurantSignup extends Component {
       password: "",
       address: "",
       phonenumber: "",
-      restaurtname: "",
+      restaurantname: "",
     };
   }
   handleEmailChange = (event) => {
@@ -38,10 +38,18 @@ class RestaurantSignup extends Component {
     alert(
       this.state.email +
         this.state.password +
-        this.state.restaurtname +
-        this.state.addres +
+        this.state.restaurantname +
+        this.state.address +
         this.state.phonenumber
     );
+
+    fetch('http://127.0.0.1:8000/foodproviders/', {
+      method: 'GET',
+      // We convert the React state to JSON and send it as the POST body
+    }).then(function(response) {
+      console.log(response)
+      return response.json();
+    });
 
     event.preventDefault();
   };

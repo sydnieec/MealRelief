@@ -22,6 +22,14 @@ class RestaurantForm extends Component {
   };
   handleSubmit = (event) => {
     alert(this.state.foodname + this.state.servings + this.state.description);
+    fetch('http://127.0.0.1:8000/foodproviders/', {
+      method: 'GET',
+      // We convert the React state to JSON and send it as the POST body
+    }).then(function(response) {
+      console.log(response)
+      return response.json();
+    });
+    
     event.preventDefault();
   };
 
