@@ -32,6 +32,9 @@ nav {
   align-items: center;
   list-style: none;
 }
+.userlists {
+  display: inline;
+}
 /* .App-logo {
   height: 40vmin;
   pointer-events: none;
