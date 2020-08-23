@@ -8,5 +8,5 @@ from .models import FoodProvider
 
 
 class FoodProviderViewSet(viewsets.ModelViewSet):
-    queryset = FoodProvider.objects.all().order_by('name')
+    queryset = FoodProvider.objects.all()
     serializer_class = FoodProviderSerializer
