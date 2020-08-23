@@ -22,7 +22,6 @@ class RestaurantForm extends Component {
   };
   handleSubmit = (event) => {
     alert(this.state.foodname + this.state.servings + this.state.description);
-<<<<<<< HEAD
     const obj = {
       "phone": "123 456 7890",
       "address": "1234 Main St.",
@@ -41,13 +40,6 @@ class RestaurantForm extends Component {
       body: JSON.stringify(obj)
     }).then(function(response) {
       console.log(response)
-=======
-    fetch("http://127.0.0.1:8000/foodproviders/", {
-      method: "GET",
-      // We convert the React state to JSON and send it as the POST body
-    }).then(function (response) {
-      console.log(response);
->>>>>>> 4192509052b65d1f1cc4cf2aa26ad5e904a6b0a5
       return response.json();
     });
 
