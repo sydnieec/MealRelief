@@ -32,9 +32,11 @@ nav {
   align-items: center;
   list-style: none;
 }
-.userlists {
-  display: inline;
+.rows {
+  display: flex;
+  flex-direction: row;
 }
+
 /* .App-logo {
   height: 40vmin;
   pointer-events: none;
