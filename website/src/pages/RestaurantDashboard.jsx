@@ -60,7 +60,7 @@ class RestaurantDashboard extends Component {
           </Card.Body>
         </Card>
         <h1 className="title"> Claim Codes</h1>
-        <div className="center">
+        <div style={claimStyle} className="center">
           <Claims
             claimslist={this.state.claimslist}
             onDelete={this.handleDelete}
@@ -76,5 +76,11 @@ export default RestaurantDashboard;
 const dashboardStyle = {
   marginRight: "20%",
   marginLeft: "20%",
+  marginTop: "2%",
+};
+
+const claimStyle = {
+  marginRight: "30%",
+  marginLeft: "30%",
   marginTop: "2%",
 };

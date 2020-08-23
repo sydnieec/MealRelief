@@ -42,6 +42,7 @@ class RestaurantSignup extends Component {
         this.state.addres +
         this.state.phonenumber
     );
+
     event.preventDefault();
   };
 
@@ -67,6 +68,7 @@ class RestaurantSignup extends Component {
                   onChange={this.handleEmailChange}
                   type="email"
                   placeholder="Enter email"
+                  required
                 />
               </Form.Group>
 
@@ -77,6 +79,7 @@ class RestaurantSignup extends Component {
                   onChange={this.handlePasswordChange}
                   type="password"
                   placeholder="Password"
+                  required
                 />
               </Form.Group>
             </Form.Row>
@@ -96,6 +99,7 @@ class RestaurantSignup extends Component {
                 value={this.state.restaurantname}
                 onChange={this.handleRestaurantNameChange}
                 placeholder="1234 Main St"
+                required
               />
             </Form.Group>
 
@@ -105,6 +109,7 @@ class RestaurantSignup extends Component {
                 value={this.state.phonenumber}
                 onChange={this.handlePhoneNumberChange}
                 placeholder="000-000-0000"
+                required
               />
               <Button variant="primary" type="submit">
                 Submit
