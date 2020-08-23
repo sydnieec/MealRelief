@@ -7,7 +7,7 @@ function User() {
   return (
     <div>
       <Nav />
-      <h1 className="title"> User Dashboard </h1>
+      <div class="mb-4"></div>
       <DefaultMap />
     </div>
   );

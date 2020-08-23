@@ -3,6 +3,8 @@ import "./App.css";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import Navbar from "react-bootstrap/Navbar";
+import Button from "react-bootstrap/Button";
+
 function Nav() {
   const navStyle = {
     color: "white",
@@ -14,18 +16,12 @@ function Nav() {
       </Link>
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
-        <ul className="nav-links">
-          <li>
-            <Link style={navStyle} to="/restaurantlogin">
-              <Navbar.Text> Login as a Food Provider</Navbar.Text>
-            </Link>
-          </li>
-          <li>
-            <Link style={navStyle} to="/restaurantsignup">
-              <Navbar.Text>Sign Up as a Food Provider</Navbar.Text>
-            </Link>
-          </li>
-        </ul>
+        <Button variant="outline-light" href="/restaurantlogin" className="mr-3">
+          Login as a Food Provider
+        </Button>
+        <Button variant="outline-light" href="/restaurantsignup">
+          Sign Up as a Food Provider
+        </Button>
         {/* <Link style={navStyle} to="/restaurantlogin">
           <Navbar.Text> Login</Navbar.Text>
         </Link>
