@@ -128,7 +128,7 @@ class RestaurantSignup extends Component {
                 type="submit"
                 onSubmit={this.handleSubmit}
               >
-                Submit
+                Sign up
               </Button>{" "}
             </Form.Group>
           </Form>
@@ -150,7 +150,7 @@ const formStyle = {
   backgroundColor: "#FFDABB",
   paddingRight: "10%",
   paddingLeft: "10%",
-  paddingBottom: "20%",
+  paddingBottom: "10%",
   borderRadius: "21px",
   color: "black",
 };

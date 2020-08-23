@@ -76,7 +76,7 @@ class RestaurantForm extends Component {
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
             <Form.Group>
-              <Form.Label>Amout of servings</Form.Label>
+              <Form.Label>Amount of servings</Form.Label>
               <Form.Control
                 value={this.state.servings}
                 onChange={this.handleServingsChange}

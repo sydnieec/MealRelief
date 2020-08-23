@@ -67,7 +67,7 @@ class RestaurantLogin extends Component {
               type="submit"
               href="/restaurantform"
             >
-              Submit
+              Login
             </Button>{" "}
           </Form>
         </div>
