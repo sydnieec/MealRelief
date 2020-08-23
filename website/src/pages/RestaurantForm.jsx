@@ -40,6 +40,7 @@ class RestaurantForm extends Component {
                 required
                 type="text"
                 placeholder="Pizza"
+                required
               />
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
@@ -51,6 +52,7 @@ class RestaurantForm extends Component {
                 required
                 type="text"
                 placeholder="50"
+                required
               />
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
@@ -61,6 +63,7 @@ class RestaurantForm extends Component {
                 onChange={this.handleDescriptionChange}
                 as="textarea"
                 rows="3"
+                required
               />
             </Form.Group>
             <Form>

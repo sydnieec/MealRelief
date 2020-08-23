@@ -36,6 +36,7 @@ class RestaurantLogin extends Component {
                 value={this.state.loginemail}
                 onChange={this.handleLoginEmailChange}
                 type="email"
+                required
                 placeholder="Enter email"
               />
             </Form.Group>
@@ -45,6 +46,7 @@ class RestaurantLogin extends Component {
                 value={this.state.loginpassword}
                 onChange={this.handleLoginPasswordChange}
                 // type="password"
+                required
                 placeholder="Password"
               />
             </Form.Group>
