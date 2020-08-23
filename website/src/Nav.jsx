@@ -24,27 +24,8 @@ function Nav() {
         <Button variant="outline-light" href="/restaurantsignup">
           Sign Up as a Food Provider
         </Button>
-        {/* <Link style={navStyle} to="/restaurantlogin">
-          <Navbar.Text> Login</Navbar.Text>
-        </Link>
-        <Link style={navStyle} to="/restaurantsignup">
-          <Navbar.Text>Signup</Navbar.Text>
-        </Link> */}
       </Navbar.Collapse>
     </Navbar>
-    // <nav>
-    //   <Link style={navStyle} to="/">
-    //     <h3>Logo & Website Name </h3>
-    //   </Link>
-    //   <ul className="nav-links">
-    //     {/* <Link style={navStyle} to="/user">
-    //       <li> User</li>
-    //     </Link> */}
-    // <Link style={navStyle} to="/restaurantlogin">
-    //   <li> Restaurant Login</li>
-    // </Link>
-    //   </ul>
-    // </nav>
   );
 }
 

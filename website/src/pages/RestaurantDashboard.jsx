@@ -8,23 +8,6 @@ import "../App.css";
 import Claims from "../components/claims";
 // import axios from "axios";
 
-// function RestaurantDashboard() {
-//   const formStyle = {
-//     paddingRight: "20%",
-//     paddingLeft: "20%",
-//   };
-//   return (
-// <React.Fragment>
-//   <NavRestaurant />
-//   <div style={formStyle}>
-//     <h1> Restaurant Dashboard</h1>
-//   </div>
-// </React.Fragment>
-//   );
-// }
-
-// export default RestaurantDashboard;
-
 class RestaurantDashboard extends Component {
   state = {
     claimslist: [

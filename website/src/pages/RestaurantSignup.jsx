@@ -16,7 +16,7 @@ class RestaurantSignup extends Component {
       password: "",
       address: "",
       phonenumber: "",
-      restaurantname: ""
+      restaurantname: "",
     };
   }
   handleEmailChange = (event) => {
@@ -57,14 +57,7 @@ class RestaurantSignup extends Component {
   render() {
     return (
       <div>
-        {/* // <div className="RestaurantSignup-component"> */}
         <Nav />
-        {/* <Navbar bg="primary" variant="dark">
-        <Link to="/">
-          <Navbar.Brand href="#home">Logo</Navbar.Brand>
-        </Link>
-        <Navbar.Toggle />
-      </Navbar>{" "} */}
         <div style={loginStyle}>
           <h1
             style={{

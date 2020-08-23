@@ -20,19 +20,6 @@ function NavRestaurant() {
         </Button>
       </Navbar.Collapse>
     </Navbar>
-    // <nav>
-    //   <Link style={navStyle} to="/">
-    //     <h3>Logo & Website Name </h3>
-    //   </Link>
-    //   <ul className="nav-links">
-    //     {/* <Link style={navStyle} to="/user">
-    //       <li> User</li>
-    //     </Link> */}
-    // <Link style={navStyle} to="/restaurantlogin">
-    //   <li> Restaurant Login</li>
-    // </Link>
-    //   </ul>
-    // </nav>
   );
 }
 
