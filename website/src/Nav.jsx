@@ -11,38 +11,21 @@ function Nav() {
   };
   return (
     <Navbar className="color-nav" variant="dark">
-      <Link style={navStyle} to="/">
-        <Navbar.Brand href="#home">Logo</Navbar.Brand>
-      </Link>
+      <Navbar.Brand href="/">MealRelief</Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
-        <Button variant="outline-light" href="/restaurantlogin" className="mr-3">
+        <Button
+          variant="outline-light"
+          href="/restaurantlogin"
+          className="mr-3"
+        >
           Login as a Food Provider
         </Button>
         <Button variant="outline-light" href="/restaurantsignup">
           Sign Up as a Food Provider
         </Button>
-        {/* <Link style={navStyle} to="/restaurantlogin">
-          <Navbar.Text> Login</Navbar.Text>
-        </Link>
-        <Link style={navStyle} to="/restaurantsignup">
-          <Navbar.Text>Signup</Navbar.Text>
-        </Link> */}
       </Navbar.Collapse>
     </Navbar>
-    // <nav>
-    //   <Link style={navStyle} to="/">
-    //     <h3>Logo & Website Name </h3>
-    //   </Link>
-    //   <ul className="nav-links">
-    //     {/* <Link style={navStyle} to="/user">
-    //       <li> User</li>
-    //     </Link> */}
-    // <Link style={navStyle} to="/restaurantlogin">
-    //   <li> Restaurant Login</li>
-    // </Link>
-    //   </ul>
-    // </nav>
   );
 }
 

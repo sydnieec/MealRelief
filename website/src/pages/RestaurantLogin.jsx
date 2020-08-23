@@ -60,14 +60,15 @@ class RestaurantLogin extends Component {
                 placeholder="Enter password"
               />
             </Form.Group>
-            <Button bsStyle="" style={btn} bsClass="btn" type="submit">
+            <Button
+              bsStyle=""
+              style={btn}
+              bsClass="btn"
+              type="submit"
+              href="/restaurantform"
+            >
               Submit
             </Button>{" "}
-            <Link to="/restaurantform">
-              <Button bsStyle="" style={btn} bsClass="btn" type="submit">
-                Login
-              </Button>
-            </Link>
           </Form>
         </div>
       </React.Fragment>
@@ -91,7 +92,7 @@ const formStyle = {
   paddingLeft: "25%",
   paddingBottom: "20%",
   borderRadius: "21px",
-  color: "white",
+  color: "black",
 };
 
 const btn = {

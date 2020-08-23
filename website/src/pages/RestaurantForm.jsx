@@ -22,14 +22,27 @@ class RestaurantForm extends Component {
   };
   handleSubmit = (event) => {
     alert(this.state.foodname + this.state.servings + this.state.description);
+    const obj = {
+      "phone": "123 456 7890",
+      "address": "1234 Main St.",
+      "name": this.state.foodname,
+      "image": "https://img.pngio.com/dish-free-vector-icons-designed-by-pause08-food-icon-png-food-food-icons-png-512_512.png",
+      "description": this.state.description,
+      "servings": this.state.servings,
+      "created_at": "08/23/2020 01:46:29",
+      "owner": null
+    }
     fetch('http://127.0.0.1:8000/foodproviders/', {
-      method: 'GET',
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
       // We convert the React state to JSON and send it as the POST body
+      
+      body: JSON.stringify(obj)
     }).then(function(response) {
       console.log(response)
       return response.json();
     });
-    
+
     event.preventDefault();
   };
 
@@ -92,14 +105,16 @@ class RestaurantForm extends Component {
                 />
               </Form.Group>
             </Form>
-            <Button variant="primary" type="submit">
+            <Button
+              bsStyle=""
+              style={btn}
+              bsClass="btn"
+              variant="primary"
+              type="submit"
+              href="/restaurantdashboard"
+            >
               Submit
             </Button>
-            <Link to="/restaurantdashboard">
-              <Button variant="primary" type="submit">
-                Submit
-              </Button>
-            </Link>
           </Form>
         </div>
       </React.Fragment>
@@ -116,10 +131,16 @@ const pageStyle = {
 };
 const formStyle = {
   paddingTop: "5%",
-  backgroundColor: "#ff8364",
+  backgroundColor: "#FFDABB",
   paddingRight: "10%",
   paddingLeft: "10%",
   paddingBottom: "10%",
   borderRadius: "21px",
-  color: "white",
+  color: "black",
+};
+
+const btn = {
+  backgroundColor: "#ff8364",
+  borderColor: "#edf7fa",
+  color: "#edf7fa",
 };
