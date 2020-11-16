@@ -4,4 +4,4 @@ Restaurants and grocery stores generate food waste every day. Food waste contrib
 
 MealRelief connects food providers with those in need of help, or in hunger. It is available as a web app that allows users to anonymously claim servings of food donation. MealRelief is built with React and Django, and leverages Azure’s Maps API.
 
-![alt text] https://github.com/sydnieec/MealRelief/blob/master/Screen%20Shot%202020-11-15%20at%2011.33.06%20PM.png
+![alt text] (https://github.com/sydnieec/MealRelief/blob/master/Screen%20Shot%202020-11-15%20at%2011.33.06%20PM.png)
